@@ -107,14 +107,14 @@ const formatDate = (dateString) => {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2000;
-  padding: 1rem;
+  z-index: var(--z-modal);
+  padding: var(--space-4);
 }
 
 .modal-container {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
   max-width: 600px;
   width: 100%;
   max-height: 90vh;
@@ -127,140 +127,142 @@ const formatDate = (dateString) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .modal-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0f172a;
+  font-size: var(--text-xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
   letter-spacing: -0.025em;
 }
 
 .close-button {
   background: none;
   border: none;
-  color: #64748b;
+  color: var(--color-text-muted);
   cursor: pointer;
-  padding: 0.5rem;
+  padding: var(--space-2);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
-  transition: all 0.15s ease;
+  border-radius: var(--radius-md);
+  transition: all var(--duration-fast) ease;
 }
 
 .close-button:hover {
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
 }
 
 .modal-body {
   flex: 1;
   overflow-y: auto;
-  padding: 2rem;
+  padding: var(--space-8);
 }
 
 .profile-section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: var(--space-8);
 }
 
 .avatar-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #e2e8f0;
+  gap: var(--space-3);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .avatar-xl {
   width: 96px;
   height: 96px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-  color: white;
+  /* Two-shade gradient collapsed to the solid token. */
+  background: var(--color-primary);
+  color: var(--color-on-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 700;
-  font-size: 2rem;
+  font-weight: var(--font-bold);
+  font-size: var(--text-3xl);
   letter-spacing: 0.025em;
-  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+  /* Was a blue-tinted shadow; now the shared medium shadow. */
+  box-shadow: var(--shadow-md);
 }
 
 .profile-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #0f172a;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-bold);
+  color: var(--color-text);
   margin: 0;
 }
 
 .profile-job-title {
-  font-size: 1rem;
-  color: #64748b;
+  font-size: var(--text-md);
+  color: var(--color-text-muted);
   margin: 0;
 }
 
 .info-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: var(--space-6);
 }
 
 .info-item {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--space-2);
 }
 
 .info-label {
-  font-size: 0.813rem;
-  font-weight: 600;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b;
+  color: var(--color-text-muted);
 }
 
 .info-value {
-  font-size: 0.938rem;
-  color: #0f172a;
-  font-weight: 500;
+  font-size: var(--text-base);
+  color: var(--color-text);
+  font-weight: var(--font-medium);
 }
 
 .modal-footer {
-  padding: 1.5rem;
-  border-top: 1px solid #e2e8f0;
+  padding: var(--space-6);
+  border-top: 1px solid var(--color-border);
   display: flex;
   justify-content: flex-end;
-  gap: 0.75rem;
+  gap: var(--space-3);
 }
 
 .btn-secondary {
-  padding: 0.625rem 1.25rem;
-  background: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.875rem;
-  color: #334155;
+  padding: var(--space-2) var(--space-5);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-medium);
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
   cursor: pointer;
-  transition: all 0.15s ease;
+  transition: all var(--duration-fast) ease;
   font-family: inherit;
 }
 
 .btn-secondary:hover {
-  background: #e2e8f0;
-  border-color: #cbd5e1;
+  background: var(--color-border);
+  border-color: var(--color-border-strong);
 }
 
 /* Modal transition animations */
 .modal-enter-active,
 .modal-leave-active {
-  transition: opacity 0.2s ease;
+  transition: opacity var(--duration-base) ease;
 }
 
 .modal-enter-from,
@@ -270,7 +272,7 @@ const formatDate = (dateString) => {
 
 .modal-enter-active .modal-container,
 .modal-leave-active .modal-container {
-  transition: transform 0.2s ease;
+  transition: transform var(--duration-base) ease;
 }
 
 .modal-enter-from .modal-container,

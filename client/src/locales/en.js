@@ -7,7 +7,11 @@ export default {
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
     companyName: 'Catalyst Components',
-    subtitle: 'Inventory Management System'
+    subtitle: 'Inventory Management System',
+    reports: 'Reports',
+    openMenu: 'Open navigation',
+    mainNavigation: 'Main navigation',
+    skipToContent: 'Skip to main content'
   },
 
   // Dashboard
