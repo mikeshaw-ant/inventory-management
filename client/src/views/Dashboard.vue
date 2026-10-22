@@ -754,7 +754,7 @@ export default {
 
 .kpi-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
@@ -812,7 +812,7 @@ export default {
 
 .charts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 28rem), 1fr)); /* stacks once two cards no longer fit beside the sidebar */
   gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
